@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> <script>
+    function verificarMascotas() {
+        let cantidadMascotas = parseInt(prompt("¿Cuántas mascotas tienes? (0, 1, 2 o más)"));
+        let resultado = document.getElementById("resultado");
+
+        switch (cantidadMascotas) {
+            case 0:
+                resultado.innerHTML = "Usted no tiene mascotas 😢 " ;
+                break;
+
+
+
+            case 1:
+                let nombreMascota = prompt("¿Cómo se llama tu mascota?");
+                resultado.innerHTML = `Usted tiene una mascota y se llama ${nombreMascota}`;
+                break;
+
+
+
+            case 2:
+                let nombreMascota1 = prompt("¿Cómo se llama la primera mascota?");
+                let nombreMascota2 = prompt("¿Cómo se llama la segunda mascota?");
+                resultado.innerHTML = `Usted tiene 2 mascotas y se llaman ${nombreMascota1} y ${nombreMascota2}`;
+                break;
+
+            default:
+                resultado.innerHTML = "Usted tiene más de 2 mascotas 🐶🐱🐰";
+                break;
+        }
+    }
+
+    window.onload = verificarMascotas;
+</script>
+</head>
+<body>
+<div id="resultado" style="font-size: 20px; padding: 20px;"></div>
+
+
+    </script>
+
+        </body>
+        </html>
